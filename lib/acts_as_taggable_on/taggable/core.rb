@@ -275,7 +275,7 @@ module ActsAsTaggableOn::Taggable
     end
 
     def tag_list_cache_set_on(context)
-      variable_name = "@#{context.to_s.singularize}_list"
+      variable_name = "@all_#{context.to_s.singularize}_list"
       instance_variable_defined?(variable_name) && instance_variable_get(variable_name)
     end
 
